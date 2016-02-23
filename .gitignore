@@ -27,7 +27,10 @@ eagle.epf
 *.drl
 *.gpi
 *.pls
+<<<<<<< HEAD
 *.lck
+=======
+>>>>>>> dcb81697e881d66f88748c0701f64e4c4a242696
 
 *.drd
 *.drd.*
