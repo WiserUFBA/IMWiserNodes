@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -199,6 +199,24 @@ Package of the female P2 (3.5mm) pcb jack.
 <wire x1="3.227" y1="3.4" x2="3.573" y2="3.4" width="0.254" layer="21"/>
 <text x="14" y="-3.1" size="1.4224" layer="25" font="vector" ratio="11" rot="R90">&gt;Name</text>
 </package>
+<package name="DPDT-PTH-7*7MM">
+<description>&lt;h3&gt; DPDT Generic Latching Switch 7x7mm &lt;/h3&gt;</description>
+<wire x1="-3.5" y1="-3.5" x2="-3.5" y2="3.5" width="0.127" layer="51"/>
+<wire x1="-3.5" y1="3.5" x2="3.5" y2="3.5" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-3.5" x2="3.5" y2="3.5" width="0.127" layer="51"/>
+<wire x1="-3.5" y1="-3.5" x2="3.5" y2="-3.5" width="0.127" layer="51"/>
+<pad name="5-OUT1-B" x="-2.5" y="-2" drill="1.1" shape="octagon"/>
+<pad name="6-OUT2-B" x="2.5" y="-2" drill="1.1" shape="octagon"/>
+<pad name="1-OUT1-A" x="-2.5" y="2" drill="1.1" shape="octagon"/>
+<pad name="2-OUT2-A" x="2.5" y="2" drill="1.1" shape="octagon"/>
+<pad name="3-IN1" x="-2.5" y="0" drill="1.1" shape="octagon"/>
+<pad name="4-IN2" x="2.5" y="0" drill="1.1" shape="octagon"/>
+<wire x1="-4.5" y1="-4.5" x2="-4.5" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-4.5" y1="4.5" x2="4.5" y2="4.5" width="0.127" layer="21"/>
+<wire x1="4.5" y1="4.5" x2="4.5" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="4.5" y1="-4.5" x2="-4.5" y2="-4.5" width="0.127" layer="21"/>
+<text x="-3.5" y="5" size="1.27" layer="25" font="vector" ratio="11">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="PJ-313">
@@ -228,6 +246,35 @@ Package of the female P2 (3.5mm) pcb jack.
 <text x="6.604" y="-2.032" size="1.27" layer="94">L</text>
 <text x="6.35" y="0.508" size="1.27" layer="94">R</text>
 <rectangle x1="-5.08" y1="-2.54" x2="-4.064" y2="2.54" layer="94"/>
+</symbol>
+<symbol name="DPDT-SWITCH">
+<wire x1="-2.54" y1="-3.81" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.81" x2="2.54" y2="6.35" width="0.254" layer="94"/>
+<wire x1="2.54" y1="8.89" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="3.81" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<circle x="-2.54" y="-2.54" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<circle x="-2.54" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="7.62" radius="0.635" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="1.27" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="5.715" x2="0" y2="4.445" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="1.905" x2="0" y2="0.635" width="0.254" layer="94"/>
+<pin name="OUT1-A" x="5.08" y="7.62" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="OUT1-B" x="5.08" y="2.54" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="OUT2-A" x="5.08" y="0" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="OUT2-B" x="5.08" y="-5.08" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="IN2" x="-5.08" y="-2.54" visible="off" length="short" direction="in"/>
+<pin name="IN1" x="-5.08" y="5.08" visible="off" length="short" direction="in"/>
+<text x="-2.54" y="11.176" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -268,6 +315,26 @@ Package of the female P2 (3.5mm) pcb jack.
 <connect gate="G$1" pin="R" pad="2"/>
 <connect gate="G$1" pin="SHIELD1" pad="1.1"/>
 <connect gate="G$1" pin="SHIELD2" pad="1.2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DPDT-GENERIC-SWITCH-7X7MM">
+<gates>
+<gate name="G$1" symbol="DPDT-SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DPDT-PTH-7*7MM">
+<connects>
+<connect gate="G$1" pin="IN1" pad="3-IN1"/>
+<connect gate="G$1" pin="IN2" pad="4-IN2"/>
+<connect gate="G$1" pin="OUT1-A" pad="1-OUT1-A"/>
+<connect gate="G$1" pin="OUT1-B" pad="5-OUT1-B"/>
+<connect gate="G$1" pin="OUT2-A" pad="2-OUT2-A"/>
+<connect gate="G$1" pin="OUT2-B" pad="6-OUT2-B"/>
 </connects>
 <technologies>
 <technology name=""/>

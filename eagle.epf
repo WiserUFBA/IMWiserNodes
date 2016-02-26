@@ -46,10 +46,12 @@ UsedLibrary="/home/jeferson/eagle-parts/SparkFun-Eagle-Libraries/SparkFun-RF.lbr
 UsedLibrary="/home/jeferson/eagle-parts/SparkFun-Eagle-Libraries/SparkFun-Sensors.lbr"
 UsedLibrary="/home/jeferson/eagle-parts/SparkFun-Eagle-Libraries/User-Submitted.lbr"
 UsedLibrary="/home/jeferson/eagle-parts/Atmel/Atmel_By_element14_Batch_1-00.lbr"
+UsedLibrary="libraries/salvador-parts.lbr"
+UsedLibrary="libraries/esp8266-modules.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="0 18 1361 746"
+Loc="0 786 1361 1514"
 State=2
 Number=0
 
